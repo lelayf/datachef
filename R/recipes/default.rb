@@ -40,7 +40,7 @@ include_recipe "R::install_#{node['r']['install_method']}"
 # remote administration of R much easier.
 template "#{node['r']['install_dir']}/etc/Rprofile.site" do
   mode "0555"
-  manage_symlink_source true
+#  manage_symlink_source true
   variables( :cran_mirror => node['r']['cran_mirror'])
 end
 

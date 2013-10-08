@@ -28,6 +28,7 @@ apt_repository "julia-deps-ppa" do
 end
 
 package "julia" do
+  options("--force-yes")
   action :install
 end
 
